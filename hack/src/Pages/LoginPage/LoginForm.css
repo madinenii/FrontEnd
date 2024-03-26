@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+ 
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+ 
+html {
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 14px;
+    /* color: #fff; */
+}
+ 
+body {
+    max-height: 100vh;
+    background-image: url("background.jpg");
+    background-size: cover;
+    overflow: hidden;
+}
+ 
+/* .App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem 0.5rem;
+} */
+ 
+section {
+    margin: auto;
+    margin-top: 5vh;
+    display: grid;
+    grid-template-rows: 6vh auto;
+    /* align-items: center; */
+    /* max-width: 35vw; */
+    max-height: 90vh;
+    /* justify-content: flex-start; */
+    /* padding: 1rem; */
+    justify-items: center;
+    width: 40vw;
+    height: 90vh;
+}
+ 
+.heading {
+    font-family: 'DM serif text';
+    color: #F63B00;
+    font-size: 1.5vw;
+}
+ 
+.formLogin {
+    background-color: rgba(255, 255, 255, 0.60);
+    border-radius: 24px;
+    box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
+    display: grid;
+    grid-template-rows: 45vh 2vh 25vh 10vh;
+    width: 40vw;
+    justify-items: center;
+    align-items: center;
+}
+ 
+.formLogin form{
+    display: grid;
+    grid-template-rows: 15vh 15vh 5vh 10vh;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+ 
+.form-grp-login{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-gap: 1vh;
+}
+ 
+.form-grp-check{
+    height: 4vh;
+    display: flex;
+    gap: 4px;
+    justify-items: center;
+    /* align-content: center; */
+    /* justify-content: center; */
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    justify-self: flex-start;
+}
+ 
+.forgot-pass{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-self: end;
+}
+ 
+.forgot-pass > button{
+    border: none;
+    background: none;
+    color: #F63B00;
+}
+ 
+a,
+a:visited {
+    color: #F63B00;
+}
+ 
+/* input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+.Sign-up {
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    width: 25vw;
+    height: 4vh;
+} */
+.form-grp-login input,
+.Sign-up {
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    width: 25vw !important;
+    height: 4vh;
+}
+ 
+.Sign-up {
+    background-color: white;
+    height: 6vh;
+    color: #F63B00;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    justify-self: center;
+    width: 15vw !important;
+}
+ 
+/* label,
+button {
+  margin-top: 1rem;
+} */
+ 
+.show-password {
+    background: none;
+    border: none;
+    /* background-color: white; */
+    width: max-content;
+    height: max-content;
+    position: relative;
+    z-index: 2;
+    /* float: right; */
+    margin-left: -30px;
+}
+ 
+button {
+    padding: 0.5rem;
+}
+ 
+hr {
+    background: black;
+    /* z-index: 49; */
+    color: black;
+    width: 30vw;
+    height: 0.5px;
+    border: none;
+}
+ 
+ 
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+  .modal-content {
+    display: grid;
+    background: white;
+    /* background: #F63B00; */
+    padding: 10px;
+    border-radius: 12px;
+    position: relative;
+    grid-template-rows: 7vh 18vh;
+    align-items: center;
+  }
+ 
+  .modal-content .close-btn{
+    font-size: x-large;
+    position: absolute;
+    top: 0%;
+    right: 2%;
+  }
+ 
+  .modal-content p{
+    font-size: x-small;
+    /* color: white; */
+  }
+ 
+  .modal-content form{
+    display: grid;
+    grid-template-rows: 9vh 9vh;
+    align-items: center;
+  }
+ 
+  .modal-content form .from-grp-modal{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: space-between;
+  }
+ 
+  .modal-content form .from-grp-modal input{
+    border: 1px #F63B00 solid;
+  }
+ 
+  .modal-content form button{
+    height: max-content;
+    width: max-content;
+    justify-self: end;
+    background-color: #F63B00;
+    height: 6vh;
+    color: white;
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    /* width: 25vw !important; */
+    /* height: 4vh; */
+    /* width: 15vw !important; */
+  }
