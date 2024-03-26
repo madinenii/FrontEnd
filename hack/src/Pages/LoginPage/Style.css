@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+ 
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+ 
+html {
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 14px;
+    /* color: #fff; */
+}
+ 
+body {
+    max-height: 100vh;
+    background-image: url("background.jpg");
+    background-size: cover;
+    overflow: hidden;
+}
+ 
+/* .App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem 0.5rem;
+} */
+ 
+section {
+    margin: auto;
+    margin-top: 5vh;
+    display: grid;
+    grid-template-rows: 0vh 6vh auto;
+    /* align-items: center; */
+    /* max-width: 35vw; */
+    max-height: 90vh;
+    /* justify-content: flex-start; */
+    /* padding: 1rem; */
+    justify-items: center;
+    width: 40vw;
+    height: 90vh;
+}
+ 
+.heading {
+    font-family: 'DM serif text';
+    color: #F63B00;
+    font-size: 1.5vw;
+}
+ 
+.form {
+    background-color: rgba(255, 255, 255, 0.60);
+    border-radius: 24px;
+    box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
+    /* flex-grow: 1; */
+    /* padding-bottom: 1rem; */
+    display: grid;
+    /* grid-template-rows: 60vh 5vh 10vh; */
+    grid-template-rows: 50vh 2vh 25vh 6vh;
+    width: 40vw;
+    justify-items: center;
+    align-items: center;
+}
+ 
+form {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 35vw;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 12vh 12vh 12vh 10vh;
+}
+ 
+.form-grp {
+    width: max-content;
+    display: grid;
+    height: max-content;
+    grid-gap: 1vh;
+}
+ 
+a,
+a:visited {
+    color: #fff;
+}
+ 
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+.Sign-up {
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    width: 15vw;
+    height: 4vh;
+}
+ 
+.Sign-up {
+    background-color: white;
+    height: 6vh;
+    color: #F63B00;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    justify-self: center;
+}
+ 
+/* label,
+button {
+  margin-top: 1rem;
+} */
+ 
+.show-password {
+    background: none;
+    border: none;
+    /* background-color: white; */
+    width: max-content;
+    height: max-content;
+    position: relative;
+    z-index: 2;
+    /* float: right; */
+    margin-left: -30px;
+}
+ 
+button {
+    padding: 0.5rem;
+}
+ 
+hr {
+    background: black;
+    /* z-index: 49; */
+    color: black;
+    width: 30vw;
+    height: 0.5px;
+    border: none;
+}
+ 
+.error-container {
+    display: grid;
+    position: absolute;
+    top: 3%;
+    right: 1%;
+    grid-gap: 1vh;
+    /* position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; */
+}
+ 
+.instructions {
+    width: 15vw;
+    font-size: 0.75rem;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.40);
+    color: white;
+    padding: 7px;
+    position: relative;
+    /* top: 3%;  */
+    right: -100%;
+    animation-name: error;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+ 
+@keyframes error {
+    from {
+        right: -100%;
+    }
+ 
+    to {
+        right: 1%;
+    }
+}
+ 
+ 
+.instructions>svg {
+    margin-right: 0.25rem;
+    color: red;
+    font-size: 1rem;
+}
+ 
+.warning{
+    display: inline;
+    color: red;
+    font-size: 1rem;
+}
+ 
+.offscreen {
+    display: none;
+    /* display: block;
+    position: relative;
+    right: 3%;
+    animation-name: off-screen;
+    animation-duration: 3s;
+    animation-fill-mode: forwards; */
+}
+ 
+/* @keyframes off-screen {
+    from{
+        right:3%;
+        display: block;
+    }
+    to {
+        right: -100%;
+        display: none;
+    }
+} */
+ 
+.hide {
+    display: none;
+}
+ 
+.valid {
+    color: rgb(91, 206, 38);
+    margin-left: 0.25rem;
+}
+ 
+.invalid {
+    color: red;
+    margin-left: 0.25rem;
+}
+ 
+.errmsg {
+    background-color: lightpink;
+    color: firebrick;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+ 
+.line {
+    display: inline-block;
+}
